@@ -1,0 +1,15 @@
+E:\Nauka\Kurs C#\Tadajewski_RecruitmentTask\Tadajewski_RecruitmentTask\bin\Debug\Tadajewski_RecruitmentTask.exe.config
+E:\Nauka\Kurs C#\Tadajewski_RecruitmentTask\Tadajewski_RecruitmentTask\bin\Debug\Tadajewski_RecruitmentTask.exe
+E:\Nauka\Kurs C#\Tadajewski_RecruitmentTask\Tadajewski_RecruitmentTask\bin\Debug\Tadajewski_RecruitmentTask.pdb
+E:\Nauka\Kurs C#\Tadajewski_RecruitmentTask\Tadajewski_RecruitmentTask\obj\Debug\Tadajewski_RecruitmentTask.csprojResolveAssemblyReference.cache
+E:\Nauka\Kurs C#\Tadajewski_RecruitmentTask\Tadajewski_RecruitmentTask\obj\Debug\MainWindow.g.cs
+E:\Nauka\Kurs C#\Tadajewski_RecruitmentTask\Tadajewski_RecruitmentTask\obj\Debug\App.g.cs
+E:\Nauka\Kurs C#\Tadajewski_RecruitmentTask\Tadajewski_RecruitmentTask\obj\Debug\Tadajewski_RecruitmentTask_MarkupCompile.cache
+E:\Nauka\Kurs C#\Tadajewski_RecruitmentTask\Tadajewski_RecruitmentTask\obj\Debug\Tadajewski_RecruitmentTask_MarkupCompile.lref
+E:\Nauka\Kurs C#\Tadajewski_RecruitmentTask\Tadajewski_RecruitmentTask\obj\Debug\MainWindow.baml
+E:\Nauka\Kurs C#\Tadajewski_RecruitmentTask\Tadajewski_RecruitmentTask\obj\Debug\Tadajewski_RecruitmentTask.g.resources
+E:\Nauka\Kurs C#\Tadajewski_RecruitmentTask\Tadajewski_RecruitmentTask\obj\Debug\Tadajewski_RecruitmentTask.Properties.Resources.resources
+E:\Nauka\Kurs C#\Tadajewski_RecruitmentTask\Tadajewski_RecruitmentTask\obj\Debug\Tadajewski_RecruitmentTask.csproj.GenerateResource.Cache
+E:\Nauka\Kurs C#\Tadajewski_RecruitmentTask\Tadajewski_RecruitmentTask\obj\Debug\Tadajewski_RecruitmentTask.csproj.CoreCompileInputs.cache
+E:\Nauka\Kurs C#\Tadajewski_RecruitmentTask\Tadajewski_RecruitmentTask\obj\Debug\Tadajewski_RecruitmentTask.exe
+E:\Nauka\Kurs C#\Tadajewski_RecruitmentTask\Tadajewski_RecruitmentTask\obj\Debug\Tadajewski_RecruitmentTask.pdb

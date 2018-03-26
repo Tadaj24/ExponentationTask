@@ -1,0 +1,141 @@
+﻿<Window x:Class="Tadajewski_RecruitmentTask.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tadajewski_RecruitmentTask"
+        mc:Ignorable="d"
+        Title="Exponentation" MinHeight="700" MinWidth="1000" Height="700" Width="1000"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Normal"
+        >
+    <Window.Background>
+        <ImageBrush ImageSource="ImageResources/backgroundImage.jpg"/>
+    </Window.Background>
+
+    <!--Main Grid-->
+    <Grid Margin="50 10 50 10" Background="LightYellow" Opacity="0.88">        
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <!--Header-->
+        <StackPanel >
+            <TextBlock Text="Recruitment task" FontSize="48" TextAlignment="Center" VerticalAlignment="Center" MinHeight="70"/>
+            <TextBlock Text="Exponentiation" FontSize="30" TextAlignment="Center" VerticalAlignment="Center" MinHeight="70"/>
+        </StackPanel>
+        
+            
+
+        <!--content grid-->
+        <Grid Grid.Row="1" Margin="0 10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <!--Left column of content grid-->
+            <Grid Grid.Column="0" Margin="10" Background="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="1.5*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Enter parameters:" FontSize="24" TextAlignment="Center" Margin="4"/>
+
+                <!--Input parameters grid-->
+                <Grid Grid.Row="1">       
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    
+
+                    <!--Base-->
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="Base" FontSize="20" HorizontalAlignment="Center"/>
+                        <TextBox x:Name="Base_TextBox" KeyDown="Exponent_TextBox_KeyDown" Background="AliceBlue" FontSize="24" Margin="20 5" Height="40" TextAlignment="Center"/>
+                    </StackPanel>
+                    
+
+                    <!--Exponent-->                    
+                    <StackPanel VerticalAlignment="Center" Grid.Column="1">
+                        <TextBlock Text="Exponent" FontSize="20" HorizontalAlignment="Center"/>
+                        <TextBox  x:Name="Exponent_TextBox"  Background="AliceBlue" KeyDown="Exponent_TextBox_KeyDown" FontSize="24" Margin="20 5" Height="40" TextAlignment="Center" />
+                    </StackPanel>
+                </Grid>
+
+                <!--Exponentation choosing method grid-->
+                <Grid Grid.Row="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    
+                    <TextBlock  Text="Choose a method of expontation:" ToolTip="The most standard algorithm." FontSize="24" TextAlignment="Center" Margin="4" TextWrapping="Wrap" VerticalAlignment="Center"/>
+
+                    <!--Method 1-->
+                    <StackPanel Orientation="Horizontal" Grid.Row="1">
+                        <RadioButton x:Name="Method1_RB" Grid.Row="1" FontSize="24" Margin="15 3 15 3" VerticalAlignment="Center" GroupName="Methods" IsChecked="True" Checked="Method_RB_Checked"/>
+                        <TextBlock x:Name="Method1Description"  Text="Standard expontation algorithm" FontSize="16" TextAlignment="Center" Margin="4" MouseLeftButtonDown="MethodDescription_MouseLeftButtonDown"/>
+                    </StackPanel>
+
+                    <!--Method 2-->
+                    <StackPanel Orientation="Horizontal" Grid.Row="2">
+                        <RadioButton x:Name="Method2_RB" Grid.Row="1" FontSize="24" Margin="15 3 15 3" VerticalAlignment="Center" GroupName="Methods" Checked="Method_RB_Checked"/>
+                        <TextBlock x:Name="Method2Description" Text="Right to left expontation algorithm" FontSize="16" TextAlignment="Center" Margin="4" MouseLeftButtonDown="MethodDescription_MouseLeftButtonDown"/>
+                    </StackPanel>
+
+                    <!--Method 3-->
+                    <StackPanel Orientation="Horizontal" Grid.Row="3">
+                        <RadioButton x:Name="Method3_RB" Grid.Row="1" FontSize="24" Margin="15 3 15 3" VerticalAlignment="Center" GroupName="Methods" Checked="Method_RB_Checked"/>
+                        <TextBlock x:Name="Method3Description" Text="Left to right expontation algorithm" FontSize="16" TextAlignment="Center" Margin="4" MouseLeftButtonDown="MethodDescription_MouseLeftButtonDown"/>
+                    </StackPanel>
+
+                    <!--Method 4-->
+                    <StackPanel Orientation="Horizontal" Grid.Row="4">
+                        <RadioButton x:Name="Method4_RB" Grid.Row="1" FontSize="24" Margin="15 3 15 3" VerticalAlignment="Center" GroupName="Methods" Checked="Method_RB_Checked"/>
+                        <TextBlock x:Name="Method4Description" Text="Montgomery Ladder expontation algorithm" FontSize="16" TextAlignment="Center" Margin="4" TextWrapping="Wrap" MouseLeftButtonDown="MethodDescription_MouseLeftButtonDown"/>
+                    </StackPanel>
+
+                </Grid>
+                
+                <!--Solve button-->
+                <Button x:Name="SolveButton" Click="SolveButton_Click" Background="Gold" Grid.Row="4" Margin="20" Content="Calculate" FontSize="32"/>
+
+            </Grid>
+            
+            <!--Right column of content grid-->
+            <Grid Grid.Column="1" Background="White" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <!--Calculation history-->
+                <TextBlock Text="Method Description/Calculation history:" FontSize="20" TextAlignment="Center" Margin="4"/>
+                <TextBox x:Name="History_TextBox" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto" Grid.Row="1" IsReadOnly="True" Margin="8" />
+                
+                <!--Result-->
+                <TextBlock Text="Result:" FontSize="24" TextAlignment="Center" Margin="4" Grid.Row="2"/>
+                <TextBox x:Name="Result_TextBox" Grid.Row="3" IsReadOnly="True" Margin="8"  VerticalAlignment="Center" FontSize="16" HorizontalScrollBarVisibility="auto" VerticalScrollBarVisibility="Auto" MaxHeight="60" Text="0"/>
+                
+            </Grid>
+        </Grid>
+
+        <!--Footer-->
+        <TextBlock Grid.Row="2" Text="Made by Kamil Tadajewski" TextAlignment="Center" FontSize="12"/>
+    </Grid>
+</Window>
